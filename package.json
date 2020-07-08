@@ -2,8 +2,10 @@
   "name": "recipe-book-universal",
   "version": "0.0.0",
   "scripts": {
+    "start": "node dist/recipe-book-universal/server/main.js",
+    "postinstall": "ng build --prod && ng run recipe-book-universal:server:production",
     "ng": "ng",
-    "start": "ng serve",
+    "start:dev": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -57,5 +59,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
+  },
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
   }
 }
